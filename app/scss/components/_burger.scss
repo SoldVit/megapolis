@@ -1,0 +1,240 @@
+.burger {
+  width: 44px;
+  height: 44px;
+  position: relative;
+  display: none;
+  padding: 12px 6px;
+  outline: transparent;
+  margin-left: auto;
+
+  @include max-w($lg) {
+    display: block;
+    position: fixed;
+    right: 0;
+  }
+
+  &__line {
+    display: none;
+    height: 2px;
+    width: 28px;
+    background-color: $black;
+
+    @include max-w($lg) {
+      display: block;
+    }
+
+    &::after,
+    &::before {
+      @include pseudo;
+      width: 28px;
+      height: 2px;
+      background-color: $black;
+      left: 1px;
+    }
+
+    &::before {
+      transform: translate(5px, -8px);
+      animation-name: burger-before--line;
+      animation-fill-mode: both;
+      animation-duration: 1s;
+
+      @keyframes burger-before--line {
+
+        from {
+          transform: translate(5px, -8px) rotate(180deg) scale(1);
+        }
+
+        50% {
+          transform: scale(1.5);
+        }
+
+        to {
+          transform: translate(5px, -8px) rotate(0) scale(1);
+        }
+      }
+    }
+
+    &::after {
+      transform: translate(5px, 8px);
+      animation-name: burger-after--after;
+      animation-fill-mode: both;
+      animation-duration: 1s;
+
+      @keyframes burger-after--after {
+
+        from {
+          transform: translate(5px, 8px) rotate(180deg) scale(1);
+        }
+
+        50% {
+          transform: scale(1.5);
+        }
+
+        to {
+          transform: translate(5px, 8px) rotate(0) scale(1);
+        }
+      }
+    }
+
+    &--active {
+
+      &::before {
+        animation-name: burger-before;
+        animation-fill-mode: both;
+        animation-duration: 1s;
+
+        @keyframes burger-before {
+
+          from {
+            transform: translate(5px, -8px) rotate(-180deg);
+          }
+
+          to {
+            transform: translate(5px, -8px) rotate(0);
+          }
+        }
+      }
+
+      &::after {
+        animation-name: burger-after;
+        animation-fill-mode: both;
+        animation-duration: 1s;
+
+        @keyframes burger-after {
+
+          from {
+            transform: translate(5px, 8px) rotate(-180deg);
+          }
+
+          to {
+            transform: translate(5px, 8px) rotate(0);
+          }
+        }
+      }
+    }
+  }
+
+  &--close {
+
+    .burger__line--active {
+      background-color: transparent;
+
+      &::before {
+        top: 22px;
+        animation-name: burger-before__close;
+        animation-fill-mode: both;
+        animation-duration: 1s;
+
+        @keyframes burger-before__close {
+
+          from {
+            transform: translate(5px, -8px) rotate(-180deg);
+          }
+
+          to {
+            transform: translate(5px, 8px) rotate(-45deg);
+          }
+        }
+      }
+
+      &::after {
+        top: 22px;
+        animation-name: burger-after__close;
+        animation-fill-mode: both;
+        animation-duration: 1s;
+
+        @keyframes burger-after__close {
+
+          from {
+            transform: translate(5px, 8px) rotate(-180deg);
+          }
+
+          to {
+            transform: translate(5px, 8px) rotate(45deg);
+          }
+        }
+      }
+    }
+  }
+
+  &--scroll {
+
+    .burger__line {
+
+      &::before {
+        animation-name: burger-before;
+        animation-fill-mode: both;
+        animation-duration: 1s;
+
+        @keyframes burger-before {
+
+          from {
+            transform: translate(5px, -8px) rotate(-180deg);
+
+          }
+
+          to {
+            transform: translate(5px, -8px) rotate(0);
+          }
+        }
+      }
+
+      &::after {
+        animation-name: burger-after;
+        animation-fill-mode: both;
+        animation-duration: 1s;
+
+        @keyframes burger-after {
+
+          from {
+            transform: translate(5px, 8px) rotate(-180deg);
+          }
+
+          to {
+            transform: translate(5px, 8px) rotate(0);
+          }
+        }
+      }
+    }
+
+    .burger__line--active {
+      background-color: transparent;
+
+      &::before {
+        top: 22px;
+        animation-name: burger-before__close;
+        animation-fill-mode: both;
+        animation-duration: 1s;
+
+        @keyframes burger-before__close {
+
+          from {
+            transform: translate(5px, -8px) rotate(-180deg);
+          }
+
+          to {
+            transform: translate(5px, 8px) rotate(-45deg);
+          }
+        }
+      }
+
+      &::after {
+        top: 22px;
+        animation-name: burger-after__close;
+        animation-fill-mode: both;
+        animation-duration: 1s;
+
+        @keyframes burger-after__close {
+
+          from {
+            transform: translate(5px, 8px) rotate(-180deg);
+          }
+
+          to {
+            transform: translate(5px, 8px) rotate(45deg);
+          }
+        }
+      }
+    }
+  }
+}

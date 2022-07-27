@@ -1,0 +1,52 @@
+<div class="mobile-menu">
+  <div class="mobile-menu__content">
+
+    <div class="container">
+
+      <a class="logo mobile-menu__logo" href="#">
+        <img class="logo__img mobile-menu__logo-img" width="121" height="161" src="../../images/sprite.svg#logo"
+          alt="Логотип сайта">
+      </a>
+
+      @include('../components/_burger.html', {
+      'class-btn': 'burger burger--close',
+      'class-line': 'burger__line burger__line--close'
+      })
+
+      <ul class="mobile-menu__items">
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__link mobile-menu__link--active status  wrapper-click" href="#catalog">
+            Products
+          </a>
+        </li>
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__link status wrapper-click" href="#catalog-reviews">
+            Who we are
+          </a>
+        </li>
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__link status wrapper-click" href="#concept">
+            Concept Store
+          </a>
+        </li>
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__link status wrapper-click" href="#recipes">
+            Recipes
+          </a>
+        </li>
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__link status wrapper-click" href="#">
+            Log In
+          </a>
+        </li>
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__link status wrapper-click" href="#">
+            Cart (0)
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+@include('../components/_overlay.html')

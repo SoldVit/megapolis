@@ -1,0 +1,86 @@
+.header {
+  padding: 30px 0;
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  transition: padding 0.4s,
+    transform 0.3s;
+  background-color: #8AB6A9;
+  animation-name: header;
+  animation-fill-mode: both;
+  animation-duration: 1s;
+
+  @keyframes header {
+
+    from {
+      transform: scale3d(1, 1, 1);
+    }
+
+    50% {
+      transform: scale3d(1.05, 1.05, 1.05);
+    }
+
+    to {
+      transform: scale3d(1, 1, 1);
+    }
+  }
+
+  @include max-w($lg) {
+    padding: 18px 0;
+  }
+
+  @include max-w($sm) {
+    padding: 11px 0;
+  }
+
+  &--scroll {
+    transition: padding 0.4s;
+    padding: 5px;
+    background-color: #8ab6a963;
+    animation-name: header-scroll;
+    animation-fill-mode: both;
+    animation-duration: 1s;
+
+    @keyframes header-scroll {
+
+      from {
+        transform: scale3d(1, 1, 1);
+      }
+
+      50% {
+        transform: scale3d(1.05, 1.05, 1.05);
+      }
+
+      to {
+        transform: scale3d(1, 1, 1);
+      }
+    }
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include max-w($sm) {
+      position: relative;
+    }
+  }
+
+
+  .header-menu {
+    display: flex;
+
+    &__item {
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+    }
+
+    @include max-w($lg) {
+      display: none;
+    }
+  }
+
+}

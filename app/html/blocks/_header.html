@@ -1,0 +1,32 @@
+<header class="header">
+  <div class="container">
+    <nav class="header__inner">
+
+      <a class="logo" href="index.html">
+        <img class="logo__img" width="200" height="39" src="" alt="Логотип сайта">
+      </a>
+
+        @include('../components/_burger.html', {
+        'class-btn': 'burger'
+        })
+        <ul class="header-menu">
+          <li class="header-menu__item">
+            <a class="header-menu__link wrapper-click" href="@link-header">
+              Главная
+            </a>
+          </li>
+          <li class="header-menu__item">
+            <a class="header-menu__link wrapper-click" href="@link-categories">
+              Блюда
+            </a>
+          </li>
+          <li class="header-menu__item">
+            <a class="header-menu__link wrapper-click" href="@link-contacts">
+              Контакты
+            </a>
+          </li>
+        </ul>
+
+    </nav>
+  </div>
+</header>

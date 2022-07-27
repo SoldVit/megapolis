@@ -1,0 +1,23 @@
+.overlay {
+
+  &::before {
+    content: '';
+    position: fixed;
+    transform: translateX(-200%);
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 12;
+  }
+
+  &--active {
+
+    &::before {
+      transition: transform 0.4s;
+      transform: translateX(0);
+    }
+  }
+}

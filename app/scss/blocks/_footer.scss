@@ -1,0 +1,15 @@
+.footer {
+
+  &__bottom {
+    padding: 19px 0;
+    margin: 0 auto;
+    border-top: 1px solid rgba(194, 194, 194, 0.2);
+    text-align: center;
+    font-size: 14px;
+    line-height: 1;
+
+    @include max-w($xs) {
+      padding: 26px 0;
+    }
+  }
+}

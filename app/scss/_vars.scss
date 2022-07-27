@@ -1,0 +1,69 @@
+$orange-900: #ff6838;
+$orange: #ffae94;
+$orange-800: #faeded;
+$darkblue-900: #363853;
+$dark: #31352b;
+$accent-status: #ff7a501a;
+$silver-100: #f9faff;
+$silver-200: #ececec;
+$silver-300: #fff2ed;
+$silver-400: #eeeff3;
+$silver-500: #e4e4e4;
+$silver-600: #C1C1C1;
+$white: #fff;
+$silver: #c2c2c2;
+$gray: #ff7a501a;
+$gray-200: #505050;
+
+$xl: 1024px;
+$lg: 900px;
+$md: 767px;
+$sm: 640px;
+$xs: 440px;
+
+@mixin max-w($width) {
+  @media (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin min-w($width) {
+  @media (min-width: calc($width + 1px)) {
+    @content;
+  }
+}
+
+@mixin max-h($height) {
+  @media (max-height: $height) {
+    @content;
+  }
+}
+
+@mixin min-h($height) {
+  @media (min-height: calc($height + 1px)) {
+    @content;
+  }
+}
+
+@mixin text-shorten($lines) {
+
+  @if $lines !=null {
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  @else {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+  }
+}
+
+@mixin pseudo($display: block, $pos: absolute, $content: '') {
+  content: $content;
+  display: $display;
+  position: $pos;
+}
