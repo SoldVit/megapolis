@@ -1,15 +1,109 @@
 .footer {
+  padding: 50px 0 15px 0;
 
-  &__bottom {
-    padding: 19px 0;
-    margin: 0 auto;
-    border-top: 1px solid rgba(194, 194, 194, 0.2);
-    text-align: center;
+  @include max-w($xl) {
+    padding: 100px 0 15px 0;
+  }
+
+  @include max-w($lg) {
+    padding: 50px 0 15px 0;
+  }
+
+  @include max-w($md) {
+    padding: 44px 0 15px 0;
+  }
+
+  @include max-w($sm) {
+    padding: 157px 0 15px 0;
+  }
+
+  @include max-w(572px) {
+    padding: 157px 0 15px 0;
+  }
+
+  @include max-w(554px) {
+    padding: 120px 0 15px 0;
+  }
+
+  @include max-w(488px) {
+    padding: 115px 0 15px 0;
+  }
+
+  @include max-w(472px) {
+    padding: 78px 0 15px 0;
+  }
+
+  @include max-w($xs) {
+    padding: 44px 0 15px 0;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+
+    @include max-w($sm) {
+      flex-direction: column;
+    }
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+
+    @include max-w($sm) {
+      order: 1;
+      justify-content: center;
+    }
+  }
+
+  &__logo {
+    margin-right: 20px;
+  }
+
+  &__text {
     font-size: 14px;
-    line-height: 1;
+    color: $silver;
+  }
 
-    @include max-w($xs) {
-      padding: 26px 0;
+  &__contact {
+    display: flex;
+    flex-direction: column;
+
+    @include max-w($sm) {
+      margin-bottom: 15px;
+      align-items: center;
+    }
+  }
+
+  &__tel {
+    font-size: 18px;
+    font-variant: lining-nums;
+  }
+
+  &__tel-dot {
+    margin-right: 8px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 43%;
+      border: 1px solid #d85f2a;
+      background-color: #d85f2a;
+      border-radius: 50%;
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+    }
+  }
+
+  &__mail {
+    align-self: flex-end;
+    font-size: 16px;
+    color: $silver;
+
+    @include max-w($sm) {
+      align-self: center;
     }
   }
 }

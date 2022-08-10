@@ -1,25 +1,18 @@
-$orange-900: #ff6838;
-$orange: #ffae94;
-$orange-800: #faeded;
-$darkblue-900: #363853;
-$dark: #31352b;
-$accent-status: #ff7a501a;
-$silver-100: #f9faff;
-$silver-200: #ececec;
-$silver-300: #fff2ed;
-$silver-400: #eeeff3;
-$silver-500: #e4e4e4;
-$silver-600: #C1C1C1;
-$white: #fff;
-$silver: #c2c2c2;
-$gray: #ff7a501a;
-$gray-200: #505050;
+$dark: #242424;
+$silver-status: #556578;
+$silver: #8195AC;
+$green: #7FB845;
+$white: #ffffff;
 
-$xl: 1024px;
+// width
+$xl: 1200px;
 $lg: 900px;
 $md: 767px;
 $sm: 640px;
 $xs: 440px;
+
+// height
+$xs-h: 390px;
 
 @mixin max-w($width) {
   @media (max-width: $width) {

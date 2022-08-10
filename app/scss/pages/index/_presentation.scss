@@ -1,0 +1,257 @@
+.presentation {
+  margin-bottom: 90px;
+
+  &__title {
+    font-variant: lining-nums;
+  }
+
+  &__title-span {
+    font-weight: 300;
+    font-size: 42px;
+
+    @include max-w($xl) {
+      font-size: 40px;
+    }
+
+    @include max-w($lg) {
+      font-size: 36px;
+    }
+
+    @include max-w($md) {
+      font-size: 34px;
+    }
+  }
+
+  &__title-span:first-child {
+
+    @include max-w($xs) {
+      font-size: 30px;
+      display: block;
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 30px;
+    margin-bottom: 40px;
+    align-items: center;
+
+    @include max-w($xl) {
+      grid-template-columns: repeat(auto-fill, 500px);
+      justify-content: center;
+    }
+
+    @include max-w($lg) {
+      grid-gap: 15px;
+      grid-template-columns: repeat(auto-fill, 435px);
+    }
+
+    @include max-w($sm) {
+      grid-template-columns: repeat(auto-fill, 327px);
+    }
+  }
+
+  &__item {
+    padding: 38px 110px;
+    background: #f5f5f5;
+    position: relative;
+    font-size: 16px;
+
+    @include max-w($lg) {
+      padding: 30px 98px;
+      padding-right: 50px;
+    }
+
+    @include max-w($lg) {
+      padding: 30px 98px;
+      padding-right: 5px;
+    }
+
+    @include max-w($sm) {
+      font-size: 14px;
+    }
+
+    &::before {
+      @include pseudo;
+      width: 60px;
+      height: 60px;
+      top: 50%;
+      transform: translate(-80px, -50%);
+      background: linear-gradient(180deg, #F48E77 0%, #D85F2A 100%);
+      border-radius: 100px;
+    }
+
+    &::after {
+      @include pseudo;
+      width: 30px;
+      height: 30px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      top: 50%;
+      transform: translate(-65px, -50%);
+    }
+
+    &--net {
+
+      &::after {
+        background-image: url('../../../images/sprite.svg#presentation--net');
+      }
+    }
+
+    &--clinic {
+
+      &::after {
+        background-image: url('../../../images/sprite.svg#presentation--clinic');
+      }
+    }
+
+    &--employer {
+
+      &::after {
+        background-image: url('../../../images/sprite.svg#presentation--employer');
+      }
+    }
+
+    &--hospital {
+
+      &::after {
+        background-image: url('../../../images/sprite.svg#presentation--hospital');
+      }
+    }
+  }
+
+  &__item-text {
+    max-width: 240px;
+
+    &--clinic {
+      max-width: 250px;
+    }
+  }
+
+  &__subtitle {
+    display: block;
+    text-align: center;
+    max-width: 490px;
+    margin: 0 auto 40px auto;
+
+    @include max-w($lg) {
+      margin: 0 auto 10px auto;
+    }
+  }
+
+  &__slider {
+    position: relative;
+  }
+
+  &__slider-items {
+    display: flex;
+  }
+
+  &__slide-link {
+    position: relative;
+
+    &::before {
+      @include pseudo;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(0deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6));
+    }
+  }
+
+  &__slide-img {
+    object-fit: contain;
+    object-position: center;
+    border-radius: 10px;
+
+    @include max-w($sm) {
+      height: 250px;
+    }
+
+    @include max-w($sm) {
+      height: 200px;
+    }
+
+    @include max-h($xs-h) {
+      height: 200px;
+    }
+  }
+
+  .carousel {
+
+    &__button.is-prev {
+      left: 16%;
+
+      @include max-w($lg) {
+        left: 18%;
+        top: 101%;
+      }
+
+      @include max-w($sm) {
+        top: 105%;
+      }
+
+      &::before {
+        background-image: url('../../../images/sprite.svg#presentation--arrow-prev');
+      }
+    }
+
+    &__button.is-next {
+      right: 16%;
+
+      @include max-w($lg) {
+        right: 18%;
+        top: 101%;
+      }
+
+      @include max-w($sm) {
+        top: 105%;
+      }
+
+      &::before {
+        background-image: url('../../../images/sprite.svg#presentation--arrow-next');
+      }
+
+      .carousel__track {
+        transform: translate3d(0)
+      }
+    }
+
+    &__button.is-prev,
+    &__button.is-next {
+
+      &::before {
+        @include pseudo;
+        width: 40px;
+        height: 40px;
+      }
+
+      svg {
+        display: none;
+      }
+    }
+
+    &__slide {
+      max-width: 570px;
+      width: 100%;
+    }
+
+
+    &__dots {
+
+      @include max-w ($md) {
+        display: none;
+      }
+    }
+  }
+
+  .presentation__slide.carousel__slide.is-selected {
+    .presentation__slide-link::before {
+      background: transparent;
+    }
+  }
+}

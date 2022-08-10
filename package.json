@@ -9,6 +9,7 @@
   "author": "Vitaly Soldatenkov",
   "license": "ISC",
   "devDependencies": {
+    "@fancyapps/ui": "^4.0.30",
     "animate.css": "^4.1.1",
     "browser-sync": "^2.27.7",
     "del": "^6.0.0",
@@ -22,7 +23,9 @@
     "gulp-svg-sprite": "^1.5.0",
     "gulp-uglify": "^3.0.2",
     "jquery": "^3.6.0",
+    "jquery-touchswipe": "^1.6.19",
     "sass": "^1.43.4",
+    "slick-carousel": "^1.8.1",
     "wowjs": "^1.1.3"
   }
 }

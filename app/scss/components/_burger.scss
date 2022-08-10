@@ -17,7 +17,7 @@
     display: none;
     height: 2px;
     width: 28px;
-    background-color: $black;
+    background-color: $dark;
 
     @include max-w($lg) {
       display: block;
@@ -28,7 +28,7 @@
       @include pseudo;
       width: 28px;
       height: 2px;
-      background-color: $black;
+      background-color: $dark;
       left: 1px;
     }
 

@@ -1,12 +1,16 @@
 @include('blocks/_head.html', {
-  'title': 'Уничтожение отходов'
+  'title': 'Уничтожение отходов - Мегаполис'
 })
 @include('blocks/_header.html', {
 })
 <main class="main">
-
+@include('pages/index/_hero.html')
+@include('pages/index/_price.html')
+@include('pages/index/_presentation.html')
+@include('pages/index/_documents.html')
+@include('pages/index/_contacts.html')
 </main>
 
 @include('blocks/_footer.html')
-@include('blocks/_mobile-menu.html')
+@include('components/_mobile-menu.html')
 @include('blocks/_footer-scripts.html')

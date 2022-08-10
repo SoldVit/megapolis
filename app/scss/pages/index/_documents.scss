@@ -1,0 +1,51 @@
+.documents {
+
+  &__title.title {
+    margin-bottom: 60px;
+
+    @include max-w($lg) {
+      margin-bottom: 40px;
+    }
+
+    @include max-w($md) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__item {
+    box-shadow: 0px 1px 15px 4px rgba(24, 34, 14, 0.2);
+
+    @include max-w($lg) {
+      margin-bottom: 10px;
+    }
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    &--licens {
+
+      @include max-w($sm) {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  &__box-img {
+    display: flex;
+    justify-content: space-between;
+
+    @include max-w($lg) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  &__img {
+    object-position: center;
+
+    &--licens {
+      width: 277px;
+    }
+  }
+}

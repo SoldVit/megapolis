@@ -1,0 +1,76 @@
+.contacts {
+  background-image: url('../../../images/contacts-bg.jpg');
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &__title {
+    padding: 90px 0 30px;
+
+    @include max-w($lg) {
+      padding: 45px 0 20px;
+    }
+
+    @include max-w($sm) {
+      padding: 30px 0 10px;
+    }
+
+    @include max-w($xs) {
+      padding: 30px 0 0;
+    }
+
+    span {
+      font-size: 42px;
+      font-weight: 300;
+
+      @include max-w($xl) {
+        font-size: 40px;
+      }
+
+      @include max-w($lg) {
+        font-size: 36px;
+      }
+
+      @include max-w($md) {
+        font-size: 34px;
+      }
+
+      @include max-w($xs) {
+        font-size: 30px;
+      }
+    }
+  }
+
+  &__map {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      display: block;
+      content: 'Республика Адыгея, Тахтамукайский район, ПГТ Эдем, промзона, район завода КСМ «Энемский»';
+      background-color: $white;
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      padding: 5px 20px;
+      max-width: 300px;
+      top: 85%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 14px;
+      color: $silver;
+      text-align: center;
+
+      @include max-w($sm) {
+        width: 100%;
+        font-size: 12px;
+        max-width: 284px;
+        padding: 5px 10px;
+      }
+
+      @include max-w($xs) {
+        max-width: 217px;
+        top: 84%;
+      }
+    }
+  }
+}

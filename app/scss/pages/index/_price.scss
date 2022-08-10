@@ -1,0 +1,67 @@
+.price {
+  margin-bottom: 90px;
+
+    @include max-w($lg) {
+      margin-bottom: 60px;
+    }
+
+    @include max-w($md) {
+      margin-bottom: 40px;
+    }
+
+  &__item {
+    display: flex;
+    padding: 34px 100px 34px 150px;
+    justify-content: space-between;
+    position: relative;
+
+    @include max-w($xl) {
+      padding: 34px 30px 34px 60px;
+    }
+
+    @include max-w($lg) {
+      flex-direction: column;
+    }
+
+    @include max-w($md) {
+      padding: 20px 30px 20px 60px;
+    }
+
+    &:nth-child(odd) {
+      background-color: #F5F5F5;
+    }
+
+    &::before {
+      @include pseudo;
+      background-image: url('../../../images/sprite.svg#price--ready');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 30px;
+      height: 30px;
+      left: 100px;
+      top: 50%;
+      transform: translateY(-50%);
+
+      @include max-w($xl) {
+        left: 19px;
+      }
+    }
+  }
+
+  &__name {
+    max-width: 720px;
+
+    @include max-w($xl) {
+      max-width: 665px;
+    }
+
+    @include max-w($lg) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__rate {
+    font-variant: lining-nums;
+  }
+}

@@ -28,33 +28,11 @@ $(function () {
   $('.mobile-menu__link').on('click', function () {
     $('.mobile-menu').removeClass('mobile-menu--active');
     $('.overlay').removeClass('overlay--active');
+    $('.burger__line').removeClass('burger__line--active');
   });
-
-  // Тач для меню
-  var menuTouch = $('.mobile-menu');
-
-  $("body").swipe({
-    swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
-      if (direction == 'right') {
-        // $('.mobile-menu').addClass('mobile-menu--active');
-        // $('.overlay').addClass('overlay--active');
-        // $('#header').addClass('header--active');
-        // $('.burger__line').addClass('burger__line--active');
-      } else if (direction == 'left') {
-        $('.mobile-menu').removeClass('mobile-menu--active');
-        $('.overlay').removeClass('overlay--active');
-        $('.burger__line').removeClass('burger__line--active');
-      }
-    }
-  });
-
-  // Открыть фильтр категории
-  // $('.catalog__btn-mobile').on('click', function () {
-  //   $('.catalog-mobile').toggleClass('catalog-mobile--active');
-  // });
 
   // Скрол для якорей
-  $('.menu__link, .mobile-menu__link, .hero__link').on('click', function () {
+  $('.header-menu__link, .mobile-menu__link, .hero__btn').on('click', function () {
     let href = $(this).attr('href');
     $('html, body').animate({
       scrollTop: $(href).offset().top
@@ -80,13 +58,30 @@ $(function () {
     scrollPrev = scrolled;
   });
 
-  // Табы на product-page
-  // $('.product-tabs__link').on('click', function (e) {
-  //   e.preventDefault();
-  //   $('.product-tabs__link').removeClass('product-tabs__link--active');
-  //   $(this).addClass('product-tabs__link--active');
-  //   $('.product-content__item').removeClass('product-content__item--active');
-  //   $($(this).attr('href')).addClass('product-content__item--active');
-  // });
+  // Тач для меню
+  var menuTouch = $('.mobile-menu');
 
+  $(".mobile-menu").swipe({
+    swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+      if (direction == 'right') {
+        // $('.mobile-menu').addClass('mobile-menu--active');
+        // $('.overlay').addClass('overlay--active');
+        // $('#header').addClass('header--active');
+        // $('.burger__line').addClass('burger__line--active');
+      } else if (direction == 'left') {
+        $('.mobile-menu').removeClass('mobile-menu--active');
+        $('.overlay').removeClass('overlay--active');
+        $('.burger__line').removeClass('burger__line--active');
+      }
+    }
+  });
+
+  // Слайдер
+  const myCarousel = new Carousel(document.querySelector("#myCarousel"), {
+    Dots: true,
+    slidesPerPage: 1,
+  });
+
+  // Анимация при скролле
+  new WOW().init();
 });

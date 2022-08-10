@@ -1,0 +1,104 @@
+.hero {
+  background-image: url('../../../images/hero-bg.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-height: 740px;
+  height: 100%;
+  margin-bottom: 90px;
+
+  @include max-w($xl) {
+    max-height: 680px;
+  }
+
+  @include max-w($lg) {
+    max-height: 590px;
+    margin-bottom: 60px;
+  }
+
+  @include max-w($md) {
+    margin-bottom: 40px;
+    max-height: 540px;
+  }
+
+  @include max-w($sm) {
+      max-height: 660px;
+  }
+
+  &__title {
+    padding-top: 180px;
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    max-width: 770px;
+
+    @include max-w($xl) {
+      font-size: 42px;
+    }
+
+    @include max-w($lg) {
+      font-size: 34px;
+      max-width: 650px;
+    }
+
+    @include max-w($md) {
+      font-size: 30px;
+      max-width: 540px;
+    }
+
+    @include max-w($xs) {
+      max-width: 356px;
+    }
+  }
+
+  &__title-indent {
+    padding-left: 21px;
+    position: relative;
+
+    &::before {
+      @include pseudo;
+      background-image: url('../../../images/sprite.svg#hero--icon');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 20px;
+      height: 20px;
+      left: -6px;
+      top: 24px;
+
+      @include max-w($xl) {
+        left: -5px;
+        top: 18px;
+      }
+
+      @include max-w($lg) {
+        left: -4px;
+        top: 14px;
+      }
+
+      @include max-w($md) {
+        left: -3px;
+        top: 11px;
+      }
+
+      @include max-w($xs) {
+        left: 3px;
+        top: 10px;
+      }
+    }
+  }
+
+  &__title-font {
+    font-weight: 300;
+  }
+
+  &__subtitle {
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 50px;
+
+    @include max-w($xs) {
+      font-size: 14px;
+    }
+  }
+}
