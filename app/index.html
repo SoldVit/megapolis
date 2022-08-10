@@ -1,70 +1,381 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" sizes="512x512" href="images/icons/favicons/favicon512x512.png">
-    <link rel="icon" sizes="32x32" href="images/icons/favicons/favicon32x32.png">
-    <title></title>
-    <link rel="stylesheet" href="css/style.min.css">
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" sizes="512x512" href="../../images/icons/logo.png">
+  <link rel="icon" sizes="32x32" href="../../images/icons/logo.png">
+  <title>Уничтожение отходов - Мегаполис</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
 
-  <body>
-    
-<header class="header">
+<body>
+<header class="header" id="header">
+
   <div class="container">
+
     <nav class="header__inner">
 
       <a class="logo" href="index.html">
-        <img class="logo__img" width="200" height="39" src="" alt="Логотип сайта">
+        <img class="logo__img" width="50" height="50" src="../../images/icons/logo.png" alt="Логотип компании">
       </a>
 
-         <button class="burger" type="button">
+       <button class="burger" type="button">
    <span class="burger__line"></span>
    <span class="sr-only">Открыть меню</span>
  </button>
- 
-        <ul class="header-menu">
-          <li class="header-menu__item">
-            <a class="header-menu__link wrapper-click" href="@link-header">
-              Главная
-            </a>
-          </li>
-          <li class="header-menu__item">
-            <a class="header-menu__link wrapper-click" href="@link-categories">
-              Блюда
-            </a>
-          </li>
-          <li class="header-menu__item">
-            <a class="header-menu__link wrapper-click" href="@link-contacts">
-              Контакты
-            </a>
-          </li>
-        </ul>
+      <ul class="header-menu">
+        <li class="header-menu__item">
+          <a class="header-menu__link wrapper-click status" href="#presentation">
+            О нас
+          </a>
+        </li>
+        <li class="header-menu__item">
+          <a class="header-menu__link wrapper-click status" href="#price">
+            Прайс-лист
+          </a>
+        </li>
+        <li class="header-menu__item">
+          <a class="header-menu__link wrapper-click status" href="#documents">
+            Документация
+          </a>
+        </li>
+        <li class="header-menu__item">
+          <a class="header-menu__link wrapper-click status" href="#contacts">
+            Контакты
+          </a>
+        </li>
+      </ul>
 
+      <a class="header-menu__tel status wrapper-click" href="tel:+7918042599">
+        +7
+        <span class="header-menu__tel-dot">
+        </span>
+        918
+        <span class="header-menu__tel-dot">
+        </span>
+        042
+        <span class="header-menu__tel-dot">
+        </span>
+        59
+        <span class="header-menu__tel-dot">
+        </span>
+        99
+      </a>
     </nav>
   </div>
 </header>
-
 <main class="main">
+<section class="hero">
 
+  <div class="container">
+
+    <h1 class="hero__title">
+      Вывозим и
+      <span class="hero__title-indent">
+        уничтожаем
+      </span>
+      <span class="hero__title-font">
+        биологические и медицинские отходы 
+      </span>
+      <span class="hero__title-bottom">
+        в республике Адыгея, <br> Краснодаре и Краснодарском крае
+      </span>
+    </h1>
+    <p class="hero__subtitle">
+      Вывезем отходы на нашем спецтранспорте
+    </p>
+
+    <a class="hero__btn btn animate__animated animate__bounceIn" href="#price">
+      Ознакомиться с услугами
+    </a>
+  </div>
+</section>
+<section class="price" id="price">
+
+  <div class="container">
+
+    <h2 class="title">
+      Прайс-лист
+    </h2>
+
+    <ul class="price__items">
+      <li class="price__item animate__animated animate__bounceInLeft wow">
+        <span class="price__name">
+        Общая кремация домашних животных
+        </span>
+        <span class="price__rate">
+          От 600 р.
+        </span>
+      </li>
+      <li class="price__item animate__bounceInRight animate__animated wow">
+        <span class="price__name">
+        Индивидуальная кремация домашних животных с выдачей праха в урне
+        </span>
+        <span class="price__rate">
+          От 4 000 р.
+        </span>
+      </li>
+      <li class="price__item animate__animated animate__bounceInLeft wow">
+        <span class="price__name">
+        Уничтожение постоперационных биологических и медицинских отходов
+        </span>
+        <span class="price__rate">
+          От 120 р/кг
+        </span>
+      </li>
+      <li class="price__item animate__bounceInRight animate__animated wow">
+        <span class="price__name">
+        Уничтожение падшего домашнего скота
+        </span>
+        <span class="price__rate">
+          От 14 р/кг
+        </span>
+      </li>
+      <li class="price__item animate__animated animate__bounceInLeft wow">
+        <span class="price__name">
+        Уничтожение семенного материала, утратившего свои потребительские свойства
+        </span>
+        <span class="price__rate">
+          От 14 р/кг
+        </span>
+      </li>
+      <li class="price__item animate__bounceInRight animate__animated wow">
+        <span class="price__name">
+        Уничтожение товаров народного потребления животного и растительного происхождения с истекшим сроком годности,
+        либо
+        утратившим свои потребительские свойства
+        </span>
+        <span class="price__rate">
+          От 14р/кг
+        </span>
+      </li>
+      <li class="price__item animate__animated animate__bounceInLeft wow">
+        <span class="price__name">
+        Уничтожение архивной и бухгалтерской документации
+        </span>
+        <span class="price__rate">
+          От 25р/кг
+        </span>
+      </li>
+      <li class="price__item animate__bounceInRight animate__animated wow">
+        <span class="price__name">
+        Транспортные услуги
+        </span>
+        <span class="price__rate">
+          80 р/км
+        </span>
+      </li>
+      <li class="price__item animate__animated animate__bounceInLeft wow" id="presentation">
+        <span class="price__name">
+        Дезинфекция автомобилей после транспортировки
+        </span>
+        <span class="price__rate">
+          400 р/рейс
+        </span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="presentation" id="presentation">
+
+  <div class="container">
+
+    <h2 class="presentation__title title">
+      <span class="presentation__title-span">
+        Работаем
+      </span>
+      с 2012 года
+      <span class="presentation__title-span">
+        с:
+      </span>
+    </h2>
+
+    <ul class="presentation__items">
+      <li class="presentation__item presentation__item--net animate__animated animate__flipInX wow">
+        <p class="presentation__item-text">
+          Крупнейшими торговыми сетями
+        </p>
+      </li>
+      <li class="presentation__item  presentation__item--clinic animate__animated animate__flipInX wow">
+        <p class="presentation__item-text presentation__item-text--clinic">
+          Частными и государственными клиниками
+        </p>
+      </li>
+      <li class="presentation__item presentation__item--employer animate__animated animate__flipInX wow">
+        <p class="presentation__item-text">
+          Индивидуальными предпринимателями
+        </p>
+      </li>
+      <li class="presentation__item presentation__item--hospital animate__animated animate__flipInX wow">
+        <p class="presentation__item-text">
+          Больницами и другими медицинскими учреждениями
+        </p>
+      </li>
+    </ul>
+    <p class="presentation__subtitle">
+      А так же участвуем в электронных торгах по предоставлению наших услуг
+    </p>
+  </div>
+
+  <div class="presentation__slider" id="myCarousel">
+    <ul class="presentation__slider-items ">
+      <li class="presentation__slide carousel__slide">
+        <a class="presentation__slide-link" data-fancybox="gallery" href="../../../images/slider/6.jpg">
+          <img class="presentation__slide-img" width="570" height="320" src="../../../images/slider/6.jpg"
+            alt="НАПИСАТЬ">
+        </a>
+      </li>
+      <li class="presentation__slide carousel__slide">
+        <a class="presentation__slide-link" data-fancybox="gallery" href="../../../images/slider/7.jpg">
+          <img class="presentation__slide-img" width="570" height="320" src="../../../images/slider/7.jpg"
+            alt="НАПИСАТЬ">
+        </a>
+      </li>
+      <li class="presentation__slide carousel__slide">
+        <a class="presentation__slide-link" data-fancybox="gallery" href="../../../images/slider/1.jpg">
+          <img class="presentation__slide-img" width="570" height="320" data-lazy-src="../../../images/slider/1.jpg"
+            alt="НАПИСАТЬ">
+        </a>
+      </li>
+      <li class="presentation__slide carousel__slide">
+        <a class="presentation__slide-link" data-fancybox="gallery" href="../../../images/slider/2.jpg">
+          <img class="presentation__slide-img" width="570" height="320" src="../../../images/slider/2.jpg"
+            alt="НАПИСАТЬ">
+        </a>
+      </li>
+      <li class="presentation__slide carousel__slide">
+        <a class="presentation__slide-link" data-fancybox="gallery" href="../../../images/slider/3.jpg">
+          <img class="presentation__slide-img" width="570" height="320" src="../../../images/slider/3.jpg"
+            alt="НАПИСАТЬ">
+        </a>
+      </li>
+      <li class="presentation__slide carousel__slide">
+        <a class="presentation__slide-link" data-fancybox="gallery" href="../../../images/slider/4.jpg">
+          <img class="presentation__slide-img" width="570" height="320" src="../../../images/slider/4.jpg"
+            alt="НАПИСАТЬ">
+        </a>
+      </li>
+      <li class="presentation__slide carousel__slide">
+        <a class="presentation__slide-link" data-fancybox="gallery" href="../../../images/slider/9.jpg">
+          <img class="presentation__slide-img" width="570" height="320" src="../../../images/slider/9.jpg"
+            alt="НАПИСАТЬ">
+        </a>
+      </li>
+      <li class="presentation__slide carousel__slide">
+        <a class="presentation__slide-link" data-fancybox="gallery" href="../../../images/slider/10.jpg">
+          <img class="presentation__slide-img" width="570" height="320" src="../../../images/slider/10.jpg"
+            alt="НАПИСАТЬ">
+        </a>
+      </li>
+      <li class="presentation__slide carousel__slide">
+        <a class="presentation__slide-link" data-fancybox="gallery" href="../../../images/slider/8.jpg">
+          <img class="presentation__slide-img" width="570" height="320" src="../../../images/slider/8.jpg"
+            alt="НАПИСАТЬ">
+        </a>
+      </li>
+      <li class="presentation__slide carousel__slide">
+        <a class="presentation__slide-link" data-fancybox="gallery" href="../../../images/slider/5.jpg">
+          <img class="presentation__slide-img" width="570" height="320" src="../../../images/slider/5.jpg"
+            alt="НАПИСАТЬ">
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+<section class="documents" id="documents">
+
+  <div class="container">
+
+    <h2 class="documents__title title">
+      Документы
+    </h2>
+    <ul class="documents__box-img">
+      <li class="documents__item">
+        <a class="documents__link" href="../../../images/documents/inn.jpg" data-fancybox="gallery-documents">
+          <img class="documents__img" src="../../../images/documents/inn.jpg" alt="ИНН" width="280" height="390">
+        </a>
+      </li>
+      <li class="documents__item">
+        <a class="documents__link" href="../../../images/documents/ogrn.jpg" data-fancybox="gallery-documents">
+          <img class="documents__img" src="../../../images/documents/ogrn.jpg" alt="ОГРН" width="280" height="390">
+        </a>
+      </li>
+      <li class="documents__item documents__item--licens">
+        <a class="documents__link" href="../../../images/documents/licens.png" data-fancybox="gallery-documents">
+          <img class="documents__img documents__img--licens" src="../../../images/documents/licens.png" alt="Лицензия"
+            width="280"
+            height="390">
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="contacts" id="contacts">
+
+  <div class="container">
+
+    <h2 class="contacts__title title">
+      <span>Наши</span> контакты
+    </h2>
+    <div class="contacts__map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d45220.426384733604!2d38.877797194270826!3d44.89736763545584!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa19a9b13e82d7061!2zNDTCsDUzJzM2LjEiTiAzOMKwNTInNTMuOSJF!5e0!3m2!1sru!2sru!4v1659620329407!5m2!1sru!2sru"
+        width="100%" height="385" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+</section>
 </main>
 
 <footer class="footer">
 
-  <div class="footer__bottom">
-    © 2021 Simple Food
+  <div class="container">
+
+    <div class="footer__inner">
+      <div class="footer__info">
+        <a class="footer__logo logo" href="index.html">
+          <img class="logo__img" width="50" height="50" src="../../images/icons/logo.png" alt="Логотип компании">
+        </a>
+        <p class="footer__text">
+          ООО «Мегаполис»<br>Все права защищены © 2022
+        </p>
+      </div>
+      <div class="footer__contact">
+        <a class="footer__tel status wrapper-click" href="tel:+7918042599">
+          +7
+          <span class="footer__tel-dot">
+          </span>
+          918
+          <span class="footer__tel-dot">
+          </span>
+          042
+          <span class="footer__tel-dot">
+          </span>
+          59
+          <span class="footer__tel-dot">
+          </span>
+          99
+        </a>
+        <a class="footer__mail wrapper-click" href="mailto:10016945@mail.ru">
+          10016945@mail.ru
+        </a>
+      </div>
+    </div>
   </div>
 </footer>
-
 <div class="mobile-menu">
   <div class="mobile-menu__content">
+
     <div class="container">
 
-      <a class="logo mobile-menu__logo" href="#">
-        <img class="logo__img mobile-menu__logo-img" width="200" height="39" src="images/logo.svg"
+      <a class="logo mobile-menu__logo" href="#header">
+        <img class="logo__img mobile-menu__logo-img" width="50" height="50" src="../../images/icons/logo.png"
           alt="Логотип сайта">
       </a>
 
@@ -72,16 +383,21 @@
    <span class="burger__line"></span>
    <span class="sr-only">Открыть меню</span>
  </button>
- 
+
       <ul class="mobile-menu__items">
         <li class="mobile-menu__item">
-          <a class="mobile-menu__link mobile-menu__link--active status  wrapper-click" href="#header">
-            Главная
+          <a class="mobile-menu__link mobile-menu__link--active status  wrapper-click" href="#presentation">
+            О нас
           </a>
         </li>
         <li class="mobile-menu__item">
-          <a class="mobile-menu__link status wrapper-click" href="#categories">
-            Блюда
+          <a class="mobile-menu__link status wrapper-click" href="#price">
+            Прайс-лист
+          </a>
+        </li>
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__link status wrapper-click" href="#documents">
+            Документация
           </a>
         </li>
         <li class="mobile-menu__item">
@@ -90,13 +406,11 @@
           </a>
         </li>
       </ul>
-
     </div>
   </div>
 </div>
 
 <div class="overlay"></div>
-
 <script src="js/main.min.js"></script>
 </body>
 </html>

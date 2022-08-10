@@ -6,33 +6,38 @@
   left: 0;
   top: 0;
   overflow: auto;
-  background-color: $orange;
+  background-color: $white;
 
   &__content {
     min-width: 300px;
     height: 100vh;
-    padding-top: 170px;
+    padding-top: 15px;
 
     @include max-h ($xs) {
-      padding-top: 110px;
+      padding-top: 15px;
     }
   }
 
   &__logo.logo {
     left: 50%;
     transform: translate(-50%, -170px);
+    margin-bottom: 40px;
 
     @include max-h ($xs) {
       transform: translate(-50%, -126px);
     }
   }
 
+  &__logo-img.logo__img {
+    margin-bottom: 80px;
+  }
+
   &__items {
     font-size: 18px;
     margin-bottom: 6px;
     padding: 25px 0;
-    border-top: 1px solid $black;
-    border-bottom: 1px solid $black;
+    border-top: 1px solid $dark;
+    border-bottom: 1px solid $dark;
   }
 
   &__item {
@@ -43,7 +48,7 @@
 
   &__link {
     &--active {
-      color: $white;
+      color: $green;
     }
   }
 

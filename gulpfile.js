@@ -55,6 +55,9 @@ function scripts() {
   return src([
       'node_modules/jquery/dist/jquery.js',
       'node_modules/wowjs/dist/wow.js',
+      'node_modules/@fancyapps/ui/dist/carousel.umd.js',
+      'node_modules/@fancyapps/ui/dist/fancybox.umd.js',
+      'node_modules/jquery-touchswipe/jquery.touchSwipe.js',
       'app/js/components/*.js',   
       'app/js/main.js'
     ])

@@ -1,32 +1,54 @@
-<header class="header">
+<header class="header" id="header">
+
   <div class="container">
+
     <nav class="header__inner">
 
       <a class="logo" href="index.html">
-        <img class="logo__img" width="200" height="39" src="" alt="Логотип сайта">
+        <img class="logo__img" width="50" height="50" src="../../images/icons/logo.png" alt="Логотип компании">
       </a>
 
-        @include('../components/_burger.html', {
-        'class-btn': 'burger'
-        })
-        <ul class="header-menu">
-          <li class="header-menu__item">
-            <a class="header-menu__link wrapper-click" href="@link-header">
-              Главная
-            </a>
-          </li>
-          <li class="header-menu__item">
-            <a class="header-menu__link wrapper-click" href="@link-categories">
-              Блюда
-            </a>
-          </li>
-          <li class="header-menu__item">
-            <a class="header-menu__link wrapper-click" href="@link-contacts">
-              Контакты
-            </a>
-          </li>
-        </ul>
+      @include('../components/_burger.html', {
+      'class-btn': 'burger'
+      })
+      <ul class="header-menu">
+        <li class="header-menu__item">
+          <a class="header-menu__link wrapper-click status" href="#presentation">
+            О нас
+          </a>
+        </li>
+        <li class="header-menu__item">
+          <a class="header-menu__link wrapper-click status" href="#price">
+            Прайс-лист
+          </a>
+        </li>
+        <li class="header-menu__item">
+          <a class="header-menu__link wrapper-click status" href="#documents">
+            Документация
+          </a>
+        </li>
+        <li class="header-menu__item">
+          <a class="header-menu__link wrapper-click status" href="#contacts">
+            Контакты
+          </a>
+        </li>
+      </ul>
 
+      <a class="header-menu__tel status wrapper-click" href="tel:+7918042599">
+        +7
+        <span class="header-menu__tel-dot">
+        </span>
+        918
+        <span class="header-menu__tel-dot">
+        </span>
+        042
+        <span class="header-menu__tel-dot">
+        </span>
+        59
+        <span class="header-menu__tel-dot">
+        </span>
+        99
+      </a>
     </nav>
   </div>
 </header>
